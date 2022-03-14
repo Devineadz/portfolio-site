@@ -1,0 +1,185 @@
+.bg{
+    /*background-color:#c4bae3;*/
+    /*background-color: #f7e8ff;*/
+    /*background-color: #2a242e;*/
+    background: linear-gradient(-45deg, #2a242e, #9a78bf, #994393, #6e0a2e, #1f1726);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    padding-top:30px;
+    min-height:600px;
+    padding-bottom:30px;
+}
+
+.content{
+    margin-bottom:30px;
+}
+
+h1, h2{
+    font-family: 'Sansita Swashed', cursive;
+    color:#f0f0f0;
+}
+
+.mc-content{
+    background-color:black;
+    color:#f0f0f0;
+    font-size:0.9rem;
+    opacity:0.9;
+    margin-top:20px;
+    padding-left:16px;
+    padding-right:16px;
+    padding-top:10px;
+    padding-bottom:10px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mat-icon{
+    vertical-align: middle;
+    margin-top:5px;
+}
+
+.first-bg{
+    background-image: url("./../../assets/imgs/web1.JPG");
+}
+
+.second-bg{
+    background-image: url("./../../assets/imgs/va-cat-ion.JPG");
+    background-size: cover;
+}
+
+.third-bg{
+    background-image: url("./../../assets/imgs/propertea.png");
+    background-size: cover;
+}
+
+.fourth-bg{
+    background-image: url("./../../assets/imgs/compiler.JPG");
+    background-size: cover;
+}
+
+.fifth-bg{
+    background-image: url("./../../assets/imgs/filterproject.JPG");
+    background-size: cover;
+}
+
+.sixth-bg{
+    background-image: url("./../../assets/imgs/hough.JPG");
+    background-size: cover;
+}
+
+.seventh-bg{
+    background-image: url("./../../assets/imgs/iconflict.JPG");
+    background-size: cover;
+}
+
+.eigth-bg{
+    background-image: url("./../../assets/imgs/pythonweb.JPG");
+    background-size: cover;
+}
+
+.nineth-bg{
+    background-image: url("./../../assets/imgs/donut.JPG");
+    background-size: cover;
+}
+
+.tenth-bg{
+    background-image: url("./../../assets/imgs/opengl.JPG");
+    background-size: cover;
+}
+
+.all-categories, .all-programming{
+    background-color: #ba531c !important;
+}
+
+.web-dev{
+    background-color: #994393 !important;
+}
+
+.game-dev{
+    background-color: #ba0648 !important;
+}
+
+.other-dev{
+    background-color: #302aad !important;
+}
+
+.cplusplus{
+    background-color: #1fc4bc !important;
+}
+
+.python{
+    background-color: #0f6bd4 !important;
+}
+
+.javascript{
+    background-color: #d9cb07 !important;
+}
+
+.csharp{
+    background-color: #5d06ba !important;
+}
+
+.inactive{
+    background-color: #9d99a1 !important;
+}
+
+.web-card{
+    border-top-style: solid;
+    border-color: #994393;
+    border-width: 5px;
+  }
+
+  .game-card{
+    border-top-style: solid;
+    border-color: #ba0648;
+    border-width: 5px;
+  }
+
+  .languages-card{
+    border-top-style: solid;
+    border-color: #80267a;
+    border-width: 5px;
+  }
+
+  .other-card{
+    border-top-style: solid;
+    border-color: #302aad;
+    border-width: 5px;
+  }
+
+  mat-card-title{
+      color:#9a78bf;
+      font-family: 'Sansita Swashed', cursive;
+      padding: 10px 16px 10px 16px;
+  }
+
+  .card-title-active{
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+    width:100%;
+  }
+
+  .mat-card {
+    /*background-color: #38303d;*/
+    background-color: #1e1726;
+    color:#f0f0f0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom:5px;
+    max-width:430px;
+    min-height:240px;
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

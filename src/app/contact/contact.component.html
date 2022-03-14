@@ -1,0 +1,50 @@
+<section id="contact" [ngStyle]="{backgroundImage:'url(assets/imgs/bg3.jpg)'}" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-12">
+                <mat-card class="example-card" *ngIf="!email_sent">
+                    <mat-card-content   class="thank-you">
+                        <mat-card-title>Thank you for contacting me!</mat-card-title>
+                        <mat-card-content style="padding-top:20px;">
+                            <!--Links to social media and repo-->
+                            <a href="https://ca.linkedin.com/in/diana-zitting-rioux-20488b80"> <img src="./assets/imgs/LI-Bug.png" class="img-rounded" alt="My Picture" width="40" style="margin-left:5px;margin-right:52px;"></a>
+                            <a href="https://github.com/Devineadz"><img src="./assets/imgs/GitHub-Mark-32px.png" class="img-rounded" alt="My Picture" width="40" style="margin-right:52px;"></a>
+                            <a href="https://twitter.com/DevineaDZ"><img src="./assets/imgs/twitter_blue.png" class="img-rounded" alt="My Picture" width="40" style="margin-right:40px;"></a>
+                        </mat-card-content>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card class="example-card" *ngIf="email_sent" data-aos="zoom-in">
+                    <mat-card-content>
+                        <mat-card-title>Contact me</mat-card-title>
+                        <form method="POST" nonvalidate #contact="ngForm">
+                            <mat-form-field class="w-50">
+                                <mat-label>Name</mat-label>
+                                <input matInput placeholder="" name="fullName" [(ngModel)]="fullName" value="" required>
+                            </mat-form-field><br>
+                            <mat-form-field class="w-50">
+                                <mat-label>Email Address</mat-label>
+                                <input matInput placeholder="" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" [(ngModel)]="email" value="" title="Invalid email address" required>
+                            </mat-form-field><br>
+                            <mat-form-field class="w-100">
+                                <mat-label>Your Message</mat-label>
+                                <textarea 
+                                matInput 
+                                placeholder="" 
+                                name="message"
+                                value=""
+                                [(ngModel)]="message"
+                                required></textarea>
+                            </mat-form-field>
+                            <div class="example-button-row">
+                                <button mat-raised-button type="submit"  class="btn" (click)="submit(contact)" >Submit</button>
+                            </div>
+                        </form>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</section>

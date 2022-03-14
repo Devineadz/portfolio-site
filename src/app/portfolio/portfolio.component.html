@@ -1,0 +1,194 @@
+<section id ="portfolio" class="bg d-flex flex-column justify-content-center align-items-center" >
+    <div class="container-fluid" style="margin-top:30px">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-sm-12 content">
+                <h1>Portfolio</h1>
+                <!--Project filter chips-->
+                <mat-chip-list aria-label="selection">
+                    <mat-chip [ngClass]="allCategories == true ? 'all-categories' : 'inactive'" (click)="toggleAllCategories()">All Categories</mat-chip>
+                    <mat-chip [ngClass]="webActive == true ? 'web-dev' : 'inactive'" (click)="toggleWeb()">Web Development</mat-chip>
+                    <mat-chip [ngClass]="gameActive == true ? 'game-dev' : 'inactive'" (click)="toggleGame()">Game Development</mat-chip>
+                    <mat-chip [ngClass]="otherActive == true ? 'other-dev' : 'inactive'" (click)="toggleOther()">Other Development</mat-chip>
+                  </mat-chip-list>
+                  <mat-chip-list aria-label="selection">
+                    <mat-chip [ngClass]="cPlusPlusActive == true ? 'cplusplus' : 'inactive'" (click)="togglecPlusPlus()">C++</mat-chip>
+                    <mat-chip [ngClass]="pythonActive == true ? 'python' : 'inactive'" (click)="togglePython()">Python</mat-chip>
+                    <mat-chip [ngClass]="javaScriptActive == true ? 'javascript' : 'inactive'" (click)="toggleJavaScript()">JavaScript/TypeScript</mat-chip>
+                    <mat-chip [ngClass]="cSharpActive == true ? 'csharp' : 'inactive'" (click)="toggleCSharp()">C#</mat-chip>
+                  </mat-chip-list>
+            </div>
+        
+        <div class="col-lg-10 col-md-10">
+        <div class="row justify-content-center">
+            <!--Project cards-->
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="webActive || javaScriptActive">
+            
+                <mat-card class="web-card" [ngClass]="webHover == true ? 'all-bg ' : 'first-bg'" (mouseover)="webHover=true" 
+                (mouseout)="webHover=false">
+                    <mat-card-title [ngClass]="webHover == true ? '' : 'card-title-active'">Portfolio website</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="web-dev">Web Development</mat-chip>
+                        <mat-chip class="javascript">JavaScript/TypeScript</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                        This portfolio website using Angular, TypeScript, HTML, CSS, Angular Material and AOS animations<br>
+                        <a href="https://github.com/Devineadz" target="_blank"><img src="./assets/imgs/GitHub-Mark-Light-32px.png" class="img-rounded" alt="My Picture" height="25" style="margin-right:40px;"></a>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="gameActive || cSharpActive">
+            
+                <mat-card class="game-card" [ngClass]="vacationHover == true ? 'all-bg ' : 'second-bg'" (mouseover)="vacationHover=true" 
+                (mouseout)="vacationHover=false">
+                    <mat-card-title [ngClass]="vacationHover == true ? '' : 'card-title-active'">Family Va-cat-ion, an obstacle game on Unity</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="game-dev">Game Development</mat-chip>
+                        <mat-chip class="csharp">C#</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                        An obstacle game made during Gamerella game with 3 other participants.<br>
+                        
+                        <a href="https://spirit-clowder.itch.io/va-cat-ion" target="_blank"><img src="./assets/imgs/itchio-logo.png" class="img-rounded" alt="My Picture" height="25" style="margin-right:40px;"></a>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="gameActive || cSharpActive">
+            
+                <mat-card class="game-card" [ngClass]="properteaHover == true ? 'all-bg ' : 'third-bg'" (mouseover)="properteaHover=true" 
+                (mouseout)="properteaHover=false">
+                    <mat-card-title [ngClass]="properteaHover == true ? '' : 'card-title-active'">Proper-tea, a 2D point and click game on Unity.</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="game-dev">Game Development</mat-chip>
+                        <mat-chip class="csharp">C#</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                        A Point and click game made during Pixelles Incubator game jam made with 3 other participants.<br>
+                        
+                        <a href="https://devinea.itch.io/proper-tea" target="_blank" style="margin-top:5px;"><img src="./assets/imgs/itchio-logo.png" class="img-rounded" alt="My Picture" height="25" style="margin-right:40px;"></a>
+                        <a href="https://www.youtube.com/watch?v=BpDi7mjWxd0&ab_channel=Devinea" target="_blank" style="margin-top:5px;"><img src="./assets/imgs/yt_icon_mono_dark.png" class="img-rounded" alt="My Picture" height="25" style="margin-right:40px;"></a>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="otherActive || cPlusPlusActive">
+            
+                <mat-card class="other-card" [ngClass]="compilerHover == true ? 'all-bg ' : 'fourth-bg'" (mouseover)="compilerHover=true" 
+                (mouseout)="compilerHover=false">
+                    <mat-card-title [ngClass]="compilerHover == true ? '' : 'card-title-active'">Simple compiler with C++ for a simple programming language</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="other-dev">Other Development</mat-chip>
+                        <mat-chip class="cplusplus">C++</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                        A compiler made for a simple University course programming language.<br>
+                        
+                        <a href="https://github.com/Devineadz/Compiler-design" target="_blank"><img src="./assets/imgs/GitHub-Mark-Light-32px.png" class="img-rounded" alt="My Picture" width="30" style="margin-right:40px;"></a>
+                    </mat-card-content>
+                    
+                </mat-card>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="otherActive || pythonActive">
+            
+                <mat-card class="other-card" [ngClass]="restoreHover == true ? 'all-bg ' : 'fifth-bg'" (mouseover)="restoreHover = true" 
+                (mouseout)="restoreHover = false">
+                    <mat-card-title  [ngClass]="restoreHover == true ? '' : 'card-title-active'">Comparison of classical image restoration filters</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="other-dev">Other Development</mat-chip>
+                        <mat-chip class="python">Python</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                        Image restoration comparison for median, mean, bilateral, min and max filters using PSNR and MSE as comparison metrics.<br>
+                        
+                        <a href="https://github.com/Devineadz/Image-Restoration-Project" target="_blank"><img src="./assets/imgs/GitHub-Mark-Light-32px.png" class="img-rounded" alt="My Picture" width="30" style="margin-right:40px;"></a>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="otherActive || pythonActive">
+            
+                <mat-card class="other-card" [ngClass]="filterHover == true ? 'all-bg ' : 'sixth-bg'" (mouseover)="filterHover = true" 
+                (mouseout)="filterHover = false">
+                    <mat-card-title [ngClass]="filterHover == true ? '' : 'card-title-active'">Different filters and techniques for Computer vision class</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="other-dev">Other Development</mat-chip>
+                        <mat-chip class="python">Python</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                        Including Hough image transform for line detection, Harris corner detection, Sobel filters, Gaussian filter implementation<br>
+                        <a href="https://github.com/Devineadz/Image-Restoration-Project" target="_blank"><img src="./assets/imgs/GitHub-Mark-Light-32px.png" class="img-rounded" alt="My Picture" width="30" style="margin-right:40px;"></a>
+
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="webActive || pythonActive">
+            
+                <mat-card class="web-card" [ngClass]="pythonwebHover == true ? 'all-bg ' : 'eigth-bg'" (mouseover)="pythonwebHover = true" 
+                (mouseout)="pythonwebHover = false">
+                    <mat-card-title [ngClass]="pythonwebHover == true ? '' : 'card-title-active'">Website project using Flask</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="web-dev">Web Development</mat-chip>
+                        <mat-chip class="python">Python</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                        Personal, dynamic website using HTML, Bootstrap and Python Flask. <br>
+                        <a href="https://github.com/Devineadz/personal-website" target="_blank"><img src="./assets/imgs/GitHub-Mark-Light-32px.png" class="img-rounded" alt="My Picture" width="30" style="margin-right:40px;"></a>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="gameActive || cSharpActive">
+            
+                <mat-card class="game-card" [ngClass]="icHover == true ? 'all-bg ' : 'seventh-bg'" (mouseover)="icHover = true" 
+                (mouseout)="icHover = false">
+                    <mat-card-title [ngClass]="icHover == true ? '' : 'card-title-active'">Inner Conflict, a 3D 2-player puzzle game</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="game-dev">Game Development</mat-chip>
+                        <mat-chip class="csharp">C#</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                       
+                        Created a simple two player puzzle game on Unity3D using C# during Pixelles Game Incubator 2019.<br>
+                        <a href="https://github.com/Devineadz/Inner_Conflict" target="_blank"><img src="./assets/imgs/GitHub-Mark-Light-32px.png" class="img-rounded" alt="My Picture" width="30" style="margin-right:40px;"></a>
+                        <a href="https://devinea.itch.io/inner-conflict" target="_blank" style="margin-top:5px;"><img src="./assets/imgs/itchio-logo.png" class="img-rounded" alt="My Picture" height="25" style="margin-right:40px;"></a>
+                       
+                        <a href="https://www.youtube.com/watch?v=qQQ2l7CMs1g&ab_channel=Devinea" target="_blank" style="margin-top:5px;"><img src="./assets/imgs/yt_icon_mono_dark.png" class="img-rounded" alt="My Picture" height="25" style="margin-right:40px;"></a>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="gameActive || cSharpActive">
+            
+                <mat-card class="game-card" [ngClass]="donytaHover == true ? 'all-bg ' : 'nineth-bg'" (mouseover)="donytaHover = true" 
+                (mouseout)="donytaHover = false">
+                    <mat-card-title [ngClass]="donytaHover == true ? '' : 'card-title-active'">Donyta's Quake, a 3D game on Unity</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="game-dev">Game Development</mat-chip>
+                        <mat-chip class="csharp">C#</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                        Worked with a team of three at Gamerella 2019 on programming part to create a simple game on Unity3D using C#.<br>
+                        <a href="https://github.com/Devineadz/donytas-quake" target="_blank"><img src="./assets/imgs/GitHub-Mark-Light-32px.png" class="img-rounded" alt="My Picture" width="30" style="margin-right:40px;"></a>
+                        <a href="https://devinea.itch.io/donytas-quake" target="_blank" style="margin-top:5px;"><img src="./assets/imgs/itchio-logo.png" class="img-rounded" alt="My Picture" height="25" style="margin-right:40px;"></a>
+                       
+                        <a href="https://www.youtube.com/watch?v=WLz2kGSCtkg&ab_channel=Devinea" target="_blank" style="margin-top:5px;"><img src="./assets/imgs/yt_icon_mono_dark.png" class="img-rounded" alt="My Picture" height="25" style="margin-right:40px;"></a>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="flip-left" data-aos-duration="1000" *ngIf="otherActive || cPlusPlusActive">
+            
+                <mat-card class="other-card" [ngClass]="graphicsHover == true ? 'all-bg ' : 'tenth-bg'" (mouseover)="graphicsHover = true" 
+                (mouseout)="graphicsHover = false">
+                    <mat-card-title [ngClass]="graphicsHover == true ? '' : 'card-title-active'">OpenGL project for Computer Graphics class</mat-card-title>
+                    <mat-card-subtitle><mat-chip class="other-dev">Other Development</mat-chip>
+                        <mat-chip class="cplusplus">C++</mat-chip>
+                    </mat-card-subtitle>
+                    <mat-card-content class="mc-content">
+                        A personal computer graphics project using C++ and OpenGL<br>
+                        <a href="https://github.com/Devineadz/christmas-wheels-on-the-bus" target="_blank"><img src="./assets/imgs/GitHub-Mark-Light-32px.png" class="img-rounded" alt="My Picture" width="30" style="margin-right:40px;"></a>
+                       
+                        <a href="https://www.youtube.com/watch?v=MBjRGfOW8zc&ab_channel=Devinea" target="_blank" style="margin-top:5px;"><img src="./assets/imgs/yt_icon_mono_dark.png" class="img-rounded" alt="My Picture" height="25" style="margin-right:40px;"></a>
+
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</section>

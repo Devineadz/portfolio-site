@@ -1,0 +1,40 @@
+
+#skills {
+    width: 100%;
+    height: 100vh;
+    background: top center;
+    background-size: cover;
+}
+
+.programming-card{
+    border-top-style: solid;
+    border-color: #664873;
+    border-width: 5px;
+  }
+
+  .other-card{
+    border-top-style: solid;
+    border-color: #6e0a2e;
+    border-width: 5px;
+  }
+
+  .languages-card{
+    border-top-style: solid;
+    border-color: #80267a;
+    border-width: 5px;
+  }
+
+  mat-card-title{
+      color:#9a78bf;
+      font-family: 'Sansita Swashed', cursive;
+      padding-bottom:10px;
+  }
+
+  .mat-card {
+    /*background-color: #38303d;*/
+    background-color: #1e1726;
+    color:#f0f0f0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom:5px;
+    min-height:200px;
+}
