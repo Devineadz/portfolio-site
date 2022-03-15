@@ -1,5 +1,5 @@
 # Portfolio-site
-This project was made with Angular CLI: 13.1.2, ng-bootstrap, AOS scroll library. Node.JS and npm also required to run this project.
+This project was made with Angular CLI: 13.1.2, ng-bootstrap, Angular Material, AOS scroll library. Node.JS and npm also required to run this project.
 
 ## Preview
 http://dianazitting-rioux.com/
